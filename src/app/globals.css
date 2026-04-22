@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: "Avenir Next", "Sora", "Nunito Sans", "Segoe UI", sans-serif;
+  --font-body: "Avenir Next", "Manrope", "Segoe UI", sans-serif;
+  --bg: #f5fbfb;
+  --text: #11252b;
+  --panel: #ffffffd9;
+  --panel-border: #c2e5e6;
+  --primary: #018383;
+  --secondary: #02a8a8;
+  --accent: #42e6a4;
+  --highlight: #f5dea3;
+  --muted: #42686b;
+  --danger: #b93856;
+}
+
+.dark {
+  --bg: #070b10;
+  --text: #eaf2f6;
+  --panel: #0f1621d9;
+  --panel-border: #213346;
+  --primary: #1492ff;
+  --secondary: #2ac2d7;
+  --accent: #78e9c2;
+  --highlight: #f6c979;
+  --muted: #8ea5b9;
+  --danger: #ff8da5;
+}
+
+* {
+  border-color: var(--panel-border);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+}
+
+@keyframes skill-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .latest-skills-grid > * {
+    opacity: 0;
+    transform: translateY(20px) scale(0.985);
+    will-change: transform, opacity;
+    animation: skill-card-enter 680ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+
+  .latest-skills-grid > *:nth-child(1) {
+    animation-delay: 60ms;
+  }
+
+  .latest-skills-grid > *:nth-child(2) {
+    animation-delay: 130ms;
+  }
+
+  .latest-skills-grid > *:nth-child(3) {
+    animation-delay: 200ms;
+  }
+
+  .latest-skills-grid > *:nth-child(4) {
+    animation-delay: 270ms;
+  }
+
+  .latest-skills-grid > *:nth-child(5) {
+    animation-delay: 340ms;
+  }
+
+  .latest-skills-grid > *:nth-child(6) {
+    animation-delay: 410ms;
+  }
+}

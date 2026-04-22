@@ -1,0 +1,49 @@
+{
+  "name": "arsflow-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ARS.FLOW verification-first AI skills website",
+  "scripts": {
+    "dev": "next dev",
+    "dev:reset": "rm -rf .next && next dev",
+    "reset:hard": "rm -rf .next node_modules tsconfig.tsbuildinfo && pnpm install",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf .next node_modules",
+    "reinstall:pnpm": "pnpm run clean && pnpm install",
+    "test": "pnpm run test:unit",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "test:all": "pnpm run typecheck && pnpm run test:unit && pnpm run test:e2e"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.15.0",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.468.0",
+    "next": "15.0.3",
+    "next-themes": "^0.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "15.0.3",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "packageManager": "pnpm@9.15.2"
+}
