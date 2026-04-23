@@ -22,4 +22,13 @@ test("mobile nav toggle works and layout does not overflow", async ({ page }) =>
     () => document.documentElement.scrollWidth > document.documentElement.clientWidth
   );
   expect(hasOverflowOnSkills).toBeFalsy();
+
+  await page.getByRole("link", { name: "Open Skill" }).first().click();
+  await expect(page).toHaveURL(/\/skills\/[^/]+$/);
+  await expect(page.getByRole("heading", { name: "Example runs" })).toBeVisible();
+
+  const hasOverflowOnSkillDetail = await page.evaluate(
+    () => document.documentElement.scrollWidth > document.documentElement.clientWidth
+  );
+  expect(hasOverflowOnSkillDetail).toBeFalsy();
 });

@@ -129,7 +129,7 @@ export default async function SkillDetailPage({ params }: SkillDetailPageProps) 
           <h2 className="font-[var(--font-heading)] text-xl font-semibold text-text">Example runs</h2>
           <div className="mt-4 space-y-4">
             {skill.examples.map((example, index) => (
-              <article key={`${example.title}-${index}`} className="rounded-2xl border border-panelBorder bg-bg/60 p-4">
+              <article key={`${example.title}-${index}`} className="min-w-0 rounded-2xl border border-panelBorder bg-bg/60 p-4">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <h3 className="text-sm font-semibold text-text">{example.title}</h3>
                   <span className="text-xs font-medium uppercase tracking-[0.1em] text-accent">
@@ -137,14 +137,18 @@ export default async function SkillDetailPage({ params }: SkillDetailPageProps) 
                   </span>
                 </div>
                 <p className="mt-2 text-xs text-muted">{example.summary}</p>
-                <div className="mt-3 grid gap-3 text-xs md:grid-cols-2">
-                  <div>
+                <div className="mt-3 grid min-w-0 gap-3 text-xs md:grid-cols-2">
+                  <div className="min-w-0">
                     <p className="mb-1 font-semibold text-text">Input preview</p>
-                    <pre className="overflow-x-auto rounded-xl bg-panel p-3 text-muted">{example.inputPreview}</pre>
+                    <pre className="max-w-full overflow-x-auto whitespace-pre-wrap break-all rounded-xl bg-panel p-3 text-muted">
+                      {example.inputPreview}
+                    </pre>
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="mb-1 font-semibold text-text">Output preview</p>
-                    <pre className="overflow-x-auto rounded-xl bg-panel p-3 text-muted">{example.outputPreview}</pre>
+                    <pre className="max-w-full overflow-x-auto whitespace-pre-wrap break-all rounded-xl bg-panel p-3 text-muted">
+                      {example.outputPreview}
+                    </pre>
                   </div>
                 </div>
               </article>

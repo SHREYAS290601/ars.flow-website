@@ -7,7 +7,29 @@ import { VantaDotsHero } from "@/components/vanta-dots-hero";
 
 export const metadata: Metadata = {
   title: "ARS.FLOW | Verification-First AI Skills",
-  description: "Discover reusable AI-agent skills with explicit checks, reliability notes, and validated sample runs."
+  description: "Discover reusable AI-agent skills with explicit checks, reliability notes, and validated sample runs.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://arsflow.vercel.app"),
+  openGraph: {
+    title: "ARS.FLOW | Verification-First AI Skills",
+    description: "Discover reusable AI-agent skills with explicit checks, reliability notes, and validated sample runs.",
+    url: "/",
+    siteName: "ARS.FLOW",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ARS.FLOW"
+      }
+    ],
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ARS.FLOW | Verification-First AI Skills",
+    description: "Discover reusable AI-agent skills with explicit checks, reliability notes, and validated sample runs.",
+    images: ["/twitter-image.png"]
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

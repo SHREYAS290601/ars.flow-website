@@ -19,9 +19,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-panelBorder/80 bg-bg/85 backdrop-blur">
       <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.18em] text-text">
-          <span className="h-2 w-2 rounded-full bg-highlight" />
-          ARS.FLOW
+        <Link href="/" className="inline-flex items-center text-sm font-semibold tracking-[0.18em] text-text">
+          <span>ARS.FLOW</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
