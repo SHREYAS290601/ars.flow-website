@@ -1,3 +1,5 @@
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/arsflow)
+
 # ARS.FLOW Website
 
 `website/` is the public-facing product for discovering and evaluating verification-first AI skills.
